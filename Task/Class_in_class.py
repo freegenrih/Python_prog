@@ -1,12 +1,11 @@
 import math
 
 
-#================================================== Класс геометрии (имен) ============================================
+# ================================================== Класс геометрии (имен) ===========================================
 
-class geometry:
+class Geometry:
     def __init__(self, name: str):
         self.name = name
-
 
     def __str__(self):
         return "Name:{};".format(
@@ -14,25 +13,22 @@ class geometry:
         )
 
 
-#================================================== Класс круга ========================================================
+# ================================================== Класс круга ======================================================
 
-class circle(geometry):
+class Circle(Geometry):
     def __init__(self, name: str, radius: int):
         super().__init__(name)
         self.radius = radius
 
-
     def get_area(self):
-        area = self.radius*math.pi
+        area = self.radius * math.pi
         print("Area Circle", end=' ')
         return area
 
-
     def get_perimeter(self):
-        P = 2*math.pi*self.radius
+        p = 2 * math.pi * self.radius
         print('Perimeter Circle', end=' ')
-        return P
-
+        return p
 
     def __str__(self):
         return "Name:{}; Radius:{};".format(
@@ -40,26 +36,24 @@ class circle(geometry):
             self.radius
         )
 
-#============================================== Класс прямоугольника ===================================================
 
-class rectangle(geometry):
-    def __init__(self,name: str,a: int, b: int):
+# ============================================== Класс прямоугольника =================================================
+
+class Rectangle(Geometry):
+    def __init__(self, name: str, a: int, b: int):
         super().__init__(name)
         self.a = a
         self.b = b
 
-
     def get_area(self):
-        S = self.a * self.b
+        s = self.a * self.b
         print("Area Rectangle", end=' ')
-        return S
-
+        return s
 
     def get_perimeter(self):
-        P = self.a + self.b
+        p = self.a + self.b
         print("Perimeter Rectangle", end=' ')
-        return P
-
+        return p
 
     def __str__(self):
         return 'Name:{}; A:{}; B:{};'.format(
@@ -68,28 +62,26 @@ class rectangle(geometry):
             self.b,
         )
 
-#============================================== Класс Треугольника =====================================================
 
-class triangle(geometry):
-    def __init__(self,name: str, a: int, b: int, c: int):
+# ============================================== Класс Треугольника ===================================================
+
+class Triangle(Geometry):
+    def __init__(self, name: str, a: int, b: int, c: int):
         super().__init__(name)
         self.a = a
         self.b = b
         self.c = c
 
-
     def get_area(self):
-        P = 1/2*(self.a + self.b + self.c)
-        S=math.sqrt(P*((P-self.a)*(P-self.b)*(P-self.c)))
+        p = 1 / 2 * (self.a + self.b + self.c)
+        s = math.sqrt(p * ((p - self.a) * (p - self.b) * (p - self.c)))
         print('Area Triangle', end=' ')
-        return S
-
+        return s
 
     def get_perimeter(self):
-        P=self.a + self.b + self.c
+        p = self.a + self.b + self.c
         print('Perimetr Triangle', end=' ')
-        return P
-
+        return p
 
     def __str__(self):
         return 'Name:{}; A:{}; B:{}; C:{};'.format(
@@ -98,24 +90,24 @@ class triangle(geometry):
             self.b,
             self.c,
         )
-#=======================================================================================================================
 
 
-geom=rectangle('rectangle', 1, 1 )
-geom_1=circle('circle', 6)
-geom_2= triangle('triangle', 2, 7, 7)
+# =====================================================================================================================
 
 
+geom = Rectangle('rectangle', 1, 1)
+geom_1 = Circle('circle', 6)
+geom_2 = Triangle('triangle', 2, 7, 7)
 
 print(geom)
-print('Name',geom.name)
+print('Name', geom.name)
 print(geom.get_area())
-print(geom.get_perimeter(),'\n')
+print(geom.get_perimeter(), '\n')
 print(geom_1)
-print('Name',geom_1.name)
+print('Name', geom_1.name)
 print(geom_1.get_area())
-print(geom_1.get_perimeter(),'\n')
+print(geom_1.get_perimeter(), '\n')
 print(geom_2)
-print('Name',geom_2.name)
+print('Name', geom_2.name)
 print(geom_2.get_area())
-print(geom_2.get_perimeter(),'\n')
+print(geom_2.get_perimeter(), '\n')
