@@ -21,15 +21,18 @@ class circle(geometry):
         super().__init__(name)
         self.radius = radius
 
+
     def get_area(self):
         area = self.radius*math.pi
         print("Area Circle", end=' ')
         return area
 
+
     def get_perimeter(self):
         P = 2*math.pi*self.radius
         print('Perimeter Circle', end=' ')
         return P
+
 
     def __str__(self):
         return "Name:{}; Radius:{};".format(
@@ -45,15 +48,18 @@ class rectangle(geometry):
         self.a = a
         self.b = b
 
+
     def get_area(self):
         S = self.a * self.b
         print("Area Rectangle", end=' ')
         return S
 
+
     def get_perimeter(self):
         P = self.a + self.b
         print("Perimeter Rectangle", end=' ')
         return P
+
 
     def __str__(self):
         return 'Name:{}; A:{}; B:{};'.format(
@@ -71,16 +77,19 @@ class triangle(geometry):
         self.b = b
         self.c = c
 
+
     def get_area(self):
         P = 1/2*(self.a + self.b + self.c)
         S=math.sqrt(P*((P-self.a)*(P-self.b)*(P-self.c)))
         print('Area Triangle', end=' ')
         return S
 
+
     def get_perimeter(self):
         P=self.a + self.b + self.c
         print('Perimetr Triangle', end=' ')
         return P
+
 
     def __str__(self):
         return 'Name:{}; A:{}; B:{}; C:{};'.format(
@@ -110,4 +119,3 @@ print(geom_2)
 print('Name',geom_2.name)
 print(geom_2.get_area())
 print(geom_2.get_perimeter(),'\n')
-
