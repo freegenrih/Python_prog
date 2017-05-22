@@ -110,3 +110,4 @@ print(geom_2)
 print('Name',geom_2.name)
 print(geom_2.get_area())
 print(geom_2.get_perimeter(),'\n')
+
