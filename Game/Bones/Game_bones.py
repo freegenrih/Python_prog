@@ -63,5 +63,5 @@ def player():
 
 
 while True:
-    print("====================================\n")
+    print("="*36,"\n")
     player()
