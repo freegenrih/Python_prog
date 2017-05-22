@@ -12,6 +12,7 @@ class geometry:
             self.name,
         )
 
+
 #================================================== Класс круга ========================================================
 # Класс круга
 class circle(geometry):
@@ -29,7 +30,11 @@ class circle(geometry):
         print('Perimeter Circle', end=' ')
         return P
 
-
+    def __str__(self):
+        return "Name:{}; Radius:{};".format(
+            self.name,
+            self.radius
+        )
 
 #============================================== Класс прямоугольника ===================================================
 #клас прямоугольника
@@ -48,6 +53,13 @@ class rectangle(geometry):
         P = self.a + self.b
         print("Perimeter Rectangle", end=' ')
         return P
+
+    def __str__(self):
+        return 'Name:{}; A:{}; B:{};'.format(
+            self.name,
+            self.a,
+            self.b,
+        )
 
 #============================================== Класс Треугольника =====================================================
 
@@ -68,6 +80,14 @@ class triangle(geometry):
         P=self.a + self.b + self.c
         print('Perimetr Triangle', end=' ')
         return P
+
+    def __str__(self):
+        return 'Name:{}; A:{}; B:{}; C:{};'.format(
+            self.name,
+            self.a,
+            self.b,
+            self.c,
+        )
 #=======================================================================================================================
 
 
@@ -75,13 +95,15 @@ geom=rectangle('rectangle', 1, 1 )
 geom_1=circle('circle', 6)
 geom_2= triangle('triangle', 2, 7, 7)
 
-
+print(geom)
 print('Name',geom.name)
 print(geom.get_area())
 print(geom.get_perimeter(),'\n')
+print(geom_1)
 print('Name',geom_1.name)
 print(geom_1.get_area())
 print(geom_1.get_perimeter(),'\n')
+print(geom_2)
 print('Name',geom_2.name)
 print(geom_2.get_area())
 print(geom_2.get_perimeter(),'\n')
