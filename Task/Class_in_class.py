@@ -1,7 +1,8 @@
 import math
 
 
-#================================================== Класс геометрии (имени) ============================================
+#================================================== Класс геометрии (имен) ============================================
+
 class geometry:
     def __init__(self, name: str):
         self.name = name
@@ -14,7 +15,7 @@ class geometry:
 
 
 #================================================== Класс круга ========================================================
-# Класс круга
+
 class circle(geometry):
     def __init__(self, name: str, radius: int):
         super().__init__(name)
@@ -37,7 +38,7 @@ class circle(geometry):
         )
 
 #============================================== Класс прямоугольника ===================================================
-#клас прямоугольника
+
 class rectangle(geometry):
     def __init__(self,name: str,a: int, b: int):
         super().__init__(name)
@@ -94,6 +95,8 @@ class triangle(geometry):
 geom=rectangle('rectangle', 1, 1 )
 geom_1=circle('circle', 6)
 geom_2= triangle('triangle', 2, 7, 7)
+
+
 
 print(geom)
 print('Name',geom.name)
